@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./king-html.css">
+  <title>我的打字情况</title>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.3/dist/echarts.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <header class="profile-header">
+      <div class="header-left">
+        <img src="./images/profile-logo.gif" alt="">
+        <div class="text">我的打字情况</div>
+      </div>
+      <div class="header-right">
+        <div class="close-box">
+          <img src="./images/close_03.gif" alt="">
+        </div>
+      </div>
+    </header>
+    <div class="main">
+      <!-- 个人资料页 -->
+      <div class="main-profile">
+        <div class="main-profile-head">
+          <div class="profile-avatar">
+            <img src="./images/avatar_03.gif" alt="头像丢了" class="img-avatar">
+            <button data-action="btn-avatar" class="btn-avatar">更换头像</button>
+          </div>
+          <div class="profile-info">
+            <div class="profile-info-item profile-info-left">
+              <p class="info-item">昵称： <span class="info-name">Robo</span></p>
+              <p class="info-item">学龄： <span class="info-age">179天</span></p>
+              <p class="info-item">所在地： <span class="info-address">未知</span></p>
+              <p class="info-item">勋章： <span class="info-mddal">勋章奖励，即将推出</span></p>
+
+            </div>
+            <div class="profile-info-item profile-info-right">
+              <p class="info-item">性别： <span class="info-sex">未知</span></p>
+              <p class="info-item">出生年月： <span class="info-birthday">未知</span></p>
+              <p class="info-item">职业： <span class="info-job">未知</span></p>
+              <p class="info-item">个人说明： <span class="info-introduction">亲，简单的介绍下你自己吧</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="profile-img">
+          <img src="./images/boy_03.gif" alt="">
+        </div>
+        <hr class="profile-hr">
+        <div class="edit-btn-box">
+          完整度： <span class="percent">17%</span>
+          <button class="btn-edit" data-action="btn-edit">编辑资料</button>
+        </div>
+      </div>
+      <!-- 编辑资料页 -->
+      <div class="main-profile edit-profile">
+        <div class="main-profile-head">
+          <div class="profile-avatar">
+            <img src="./images/avatar_03.gif" alt="头像丢了" class="img-avatar">
+            <button data-action="btn-avatar" class="btn-avatar">更换头像</button>
+          </div>
+          <div class="profile-info">
+            <div class="profile-info-item profile-info-left">
+              <p class="info-item">昵称： <input type="text" class="input-name"  value="Robo">
+              <p class="info-item">学龄： <span class="info-age">179天</span></p>
+              <p class="info-item">所在地： <input class="input-address"/></p>
+              <p class="info-item">勋章： <span class="info-mddal">勋章奖励，即将推出</span></p>
+            </div>
+            <div class="profile-info-item profile-info-right">
+              <p class="info-item">性别： <input type=" text" class="input-sex" value="男"></p>
+              <p class="info-item">出生年月： 
+                <select name="birth-year" id="select-year">
+                
+                </select>
+                <select name="birth-month" id="">
+                  <option value="january">1月</option>
+                  <option value="february">2月</option>
+                  <option value="march">3月</option>
+                  <option value="april">4月</option>
+                  <option value="may">5月</option>
+                  <option value="june">6月</option>
+                  <option value="july">7月</option>
+                  <option value="august">8月</option>
+                  <option value="september">9月</option>
+                  <option value="october">10月</option>
+                  <option value="november">11月</option>
+                  <option value="december">12月</option>
+                </select></p>
+              <p class="info-item">职业： <span class="info-job">未知</span></p>
+              <p class="info-item">个人说明： <span class="info-introduction">亲，简单的介绍下你自己吧</span></p>
+            </div>
+          </div>
+        </div>
+        <hr class="edit-profile-hr">
+        <div class="edit-profile-btn-box">
+          <button class="btn-save-info">保存</button>
+          <button class="btn-edit-back">取消</button>
+        </div>
+      </div>
+      <!-- 进步曲线页面 -->
+      <div class="line-profile">
+        <div class="line-head">
+          <ul class="lang-list flex-start">
+            <li class="lang-item">
+              <img src="./images/pin.gif" alt="">
+              新手
+              <ul class="lang-new-list lang-sub-list">
+              <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('abc')">字母</li>
+                <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('$')">符号</li>
+                <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('number')">数字</li>
+                <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('checkError')">纠错</li>
+              </ul>
+            </li>
+            <li class="lang-item">
+              <img src="./images//en.gif" alt="">
+              英文-语句
+              <ul class="lang-new-list lang-sub-list">
+                <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('singleWord')">单词</li>
+                  <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('words')">语句</li>
+                  <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('article')">文章</li>
+          
+                </ul>
+            </li>
+            <li class="lang-item">
+              <img src="./images/pin.gif" alt="">
+              拼音
+              <ul class="lang-new-list lang-sub-list">
+                <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('yinjie')">音节</li>
+                  <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('cizu')">词组</li>
+                  <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('wenzhang')">文章</li>
+          
+                </ul>
+            </li>
+            <li class="lang-item">
+              <img src="./images/five_11.gif" alt="">
+              五笔
+              <ul class="lang-new-list lang-sub-list">
+                <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('five-zigen')">字根</li>
+                  <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('five-danzi')">单字</li>
+                  <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('five-cizu')">词组</li>
+                  <li class="lang-sub-item" onclick="Robo.lineProfileObj.changeChart('five-wenzhang')">文章</li>
+          
+                </ul>
+            </li>
+          </ul>
+          <div class="daily-box">
+            <span class="daily-label">起止日期：</span>
+            <input type="date"  class="date-start" data-action="date-start" value="2022-02-27">
+            -
+            <input type="date"  class="date-end" data-action="date-end" value="2022-08-25">
+            <button class="btn-search" data-action="search-data">查看</button>
+          </div>
+        </div>
+        <div class="chart-box flex-center" >
+          <div class="chart-box" id="line-detail"></div>
+        </div>
+      </div>
+    </div>
+    <footer class="profile-footer">
+      <div class="btns-box">
+        <div class="footer-btn1 footer-btn-item footer-btn-active" data-action="f-btn1" onclick="">
+          <img src="./images/profile_03.gif" alt="">
+          我的资料
+        </div>
+        <div class="footer-btn2 footer-btn-item" data-action="f-btn2">
+          <img src="./images/line_05.gif" alt="">
+          进步曲线
+        </div>
+        <div class="footer-btn3 footer-btn-item" data-action="f-btn3">
+          <img src="./images/level_07.gif" alt="">
+          打字水平
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    (function(){
+      let selectYear = document.querySelector('#select-year')
+      // console.log(selectYear)
+      let innerOptionStr = ''
+      let now = new Date()
+      let tYear = now.getFullYear()
+      for(let i = tYear-120; i < tYear; i++){
+         innerOptionStr += `<option value='${i}'>${i}年</option>`
+      }
+      selectYear.innerHTML = innerOptionStr
+    })()
+  </script>
+  <script src="./king-html.js"></script>
+</body>
+</html>

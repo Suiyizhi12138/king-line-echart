@@ -1,0 +1,379 @@
+
+/*通用样式*/
+
+
+body,div,header,footer,ul,li,ol{
+  margin:0;
+  padding: 0;
+  font-size: 14px;
+  color: #333;   
+}
+input{
+  outline: none;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+button{
+  cursor: pointer;
+}
+#app{
+  width: 780px;
+  height: 484px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: rgb(251,251,251);
+  border: 1px solid #999;
+}
+.flex-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-column{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.flex-start{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+}
+.flex-end{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+
+/*通用 头部 尾部*/
+.profile-header{
+  background-color: #4f95ff;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header-left{
+  display: flex;
+  justify-content: center;
+  line-height: 30px;
+  text-align: center;
+  align-items: center;
+}
+.header-left img{
+  margin-left: 15px;
+  width: 15px;
+  height: 15px;
+}
+.header-left .text{
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.header-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-right .close-box{
+  
+  margin-right: 16px;
+}
+.header-right .close-box img{
+  width: 11px;
+  height: 11px;
+}
+/*尾部*/
+.profile-footer{
+  width: 100%;
+  height: 60px;
+  background-color: rgb(230,239,241);
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.profile-footer .btns-box{
+  display: flex;
+}
+.btn-box{
+  height: 60px;
+}
+.btns-box .footer-btn-item{
+  flex: 1;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.footer-btn-item img{
+  width: 34px;
+  height: 34px;
+  margin-right: 12px; 
+}
+.footer-btn-active{
+  background: url(./images/live-footer_03.gif)  left top no-repeat;
+  background-color: #fff;
+  background-position: 2px -5px;
+}
+
+
+
+/*个人信息页*/
+.main{
+  background-color: rgb(251,251,251);
+}
+.main-profile{
+
+}
+.main-profile{
+  background-color: rgb(251,251,251);
+  display: block;
+}
+.main .main-profile .main-profile-head{
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;  
+}
+
+
+.profile-avatar{
+  margin-left: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.profile-avatar .btn-avatar{
+  margin-top: 10px;
+  background-color: rgb(230,239,241);
+  border: 2px solid rgb(193,202,215);
+  border-radius: 2px;
+  cursor: pointer;
+}
+.profile-avatar .btn-avatar:hover{
+  border-color: #4f7fff;
+}
+.profile-info{
+  margin-left: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+/* .profile-info-item{
+
+} */
+.profile-info-right{
+  margin-left: 140px;
+}
+p.info-item{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.profile-img img{
+  margin-left: 60px;
+  height: 140px;
+  width: auto;
+}
+
+hr.profile-hr{
+  color: #ccc;
+  border-top: 1px solid #ccc;
+  border-bottom: none;
+}
+.edit-btn-box{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 60px;
+  line-height: 60px;
+
+}
+
+.edit-btn-box .btn-edit{
+  width: 84px;
+  height: 28px;
+  margin-right: 20px;
+  margin-left: 14px;
+
+  background-color: rgb(230,239,241);
+  border: 1px solid rgb(193,202,215);
+  border-radius: 2px;
+}
+.edit-btn-box .btn-edit:hover{
+  border: 2px solid #4f75ff;
+}
+
+/*编辑信息*/
+.edit-peofile{
+
+}
+.main .edit-profile{
+  display: none;
+}
+.edit-profile .input-name,.input-address,.input-sex{
+  width: 150px;
+  height: 15px;
+  border: 1px solid rgb(230,239,241);
+}
+.edit-profile .edit-profile-hr{
+  height: 0px;
+  margin-top: 130px;
+  width: 200px;
+  float: right; 
+  border-top: none;
+}
+.edit-profile-btn-box{
+  display: flex;
+  margin-top: 150px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.edit-profile-btn-box .btn-save-info,.btn-edit-back{
+  width: 70px;
+  height: 24px;
+  background-color: rgb(230,239,241);
+  border-color: rgb(193,202,215);
+  border-radius: 2px;
+}
+.edit-profile .btn-save-info{
+  margin-right: 20px;
+  
+}
+.edit-profile .btn-edit-back{
+  margin-right: 20px;
+}
+
+
+
+/*成绩曲线页面*/
+.line-profile{}
+.main .line-profile{
+  display: none;
+
+}
+
+.line-profile .line-head{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 34px;
+}
+.line-head .lang-list{
+  height: 24px;
+ 
+  margin-left: 28px;
+}
+.line-head .lang-item{
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 16px;
+  cursor: pointer;
+  position: relative;
+  border: 1px solid rgb(251,251,251);
+  border-radius: 2px;
+  padding: 0 2px;
+
+}
+.line-head .lang-item:hover{
+  border: 1px solid #4f95ff;
+  border-radius: 2px;
+}
+.line-profile .lang-item:hover .lang-sub-list{ 
+    display:block;
+    border: 1px solid #4f95ff;
+
+}
+.line-profile .lang-sub-list{
+  display: none;
+  position: absolute;
+  top: 24px;
+  left: 0px;
+  background-color: rgb(230,239,241);
+  width: 74px;
+  border: 1px solid rgb(193,202,215);
+  padding: 5px 0px;
+  z-index: 9;
+
+}
+.line-profile .lang-sub-item{
+  width: 74px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 11px;
+  float: left;
+  
+}
+.line-profile .lang-sub-item:hover{
+  background-color: rgb(200,210,252)
+}
+.line-profile .lang-item-active{
+  border-bottom: 2px solid #4f95ff;
+
+}
+.line-head .lang-item img{
+  width: 16px;
+  height: 16px;
+  margin-right: 5px;
+}
+
+.line-head .daily-box{
+  margin-left: 40px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-size: 11px;
+}
+.daily-box input[type="date"]{
+  width: 120px;
+  height: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  
+}
+.daily-box .btn-search{
+  width: 70px;
+  height: 24px;
+  border: 1px solid rgb(200,210,252);
+  background-color: #fff;
+  border-radius: 2px;
+}
+.daily-box .btn-search:hover{
+  border-color: orange;
+}
+
+.line-profile .chart-box{
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*图表容器*/
+#line-detail{
+  width: 600px;
+  height: 300px;
+}
+
+
